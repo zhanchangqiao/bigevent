@@ -80,7 +80,7 @@ $(function () {
                 // console.log('a');
                 localStorage.setItem('token', res.token);
                 $('#login')[0].reset();
-                // window.location.href = "/index.html";
+                window.location.href = "/index.html";
             }
 
         });
