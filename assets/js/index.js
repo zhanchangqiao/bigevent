@@ -13,7 +13,7 @@ $(function () {
         });
     });
 
-
+    getUserInfo();
 
 });
 
@@ -25,12 +25,16 @@ function getUserInfo() {
         success: function (res) {
             console.log(res);
             // 2. 渲染页面
-        },
 
-        // headers 让我们自己配置请求头
-        headers: {
-            // key: value
-            Authorization: localStorage.getItem('token')
+            //成功
+            var username = res.data.username;
+            console.log(res.data.username);
+            $('.person').text(username);
+            $('.touxiang').text(username.substring(0, 1).toUpperCase());
+            console.log()
+
+
+
         }
     });
 
