@@ -1,0 +1,25 @@
+.layui-card{
+    margin: 10px 20px;
+}
+body{
+    background-color: #ccc;
+}
+th{
+    width: 33%;
+}
+.edit,.del{
+    height: 20px;
+    font-size: 10px;
+    padding: 0px 5px;
+    line-height: 20px;
+}
+.edit{
+    background-color: red;
+}
+.del{
+    background-color: green;
+}
+.layui-form{
+    margin-top: 10px;
+    padding-right: 20px;
+}

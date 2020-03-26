@@ -8,6 +8,7 @@ $(function () {
                 // console.log(xhr);
                 if (xhr.responseJSON.status !== 0) {
                     layer.msg(xhr.responseJSON.message);
+                    localStorage.removeItem('token');
                     location.href = "login.html";
                 }
             }
