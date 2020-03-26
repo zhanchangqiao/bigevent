@@ -6,10 +6,10 @@ $(function () {
             }
             option.complete = function (xhr) {
                 // console.log(xhr);
-                if (xhr.responseJSON.status !== 0) {
+                if (xhr.responseJSON.status !== 0 && xhr.responseJSON.message === '身份认证失败！') {
                     layer.msg(xhr.responseJSON.message);
                     localStorage.removeItem('token');
-                    location.href = "login.html";
+                    location.href = "/login.html";
                 }
             }
         }
