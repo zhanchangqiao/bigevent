@@ -25,16 +25,12 @@ function getUserInfo() {
         success: function (res) {
             console.log(res);
             // 2. 渲染页面
-
             //成功
-            var username = res.data.username;
+            var data = res.data;
+            var username = data.nickname || data.username;;
             console.log(res.data.username);
             $('.person').text(username);
             $('.touxiang').text(username.substring(0, 1).toUpperCase());
-            console.log()
-
-
-
         }
     });
 

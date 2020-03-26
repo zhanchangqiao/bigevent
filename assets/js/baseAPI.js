@@ -5,7 +5,7 @@ $(function () {
                 Authorization: localStorage.getItem('token')
             }
             option.complete = function (xhr) {
-                console.log(xhr);
+                // console.log(xhr);
                 if (xhr.responseJSON.status !== 0) {
                     layer.msg(xhr.responseJSON.message);
                     location.href = "login.html";
