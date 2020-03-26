@@ -19,6 +19,8 @@ iframe{
     line-height: 40px;
     font-size: 20px;
     background-color: green;
+    vertical-align: middle;
+    display: none;
 }
 .name .wel{
     color: #fff;

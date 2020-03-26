@@ -28,9 +28,17 @@ function getUserInfo() {
             //成功
             var data = res.data;
             var username = data.nickname || data.username;;
-            console.log(res.data.username);
-            $('.person').text(username);
-            $('.touxiang').text(username.substring(0, 1).toUpperCase());
+            console.log(res.data.user_pic);
+            if (res.data.user_pic) {
+                $('.touxiang').show();
+                $('.layui-nav-img').show().attr('src', res.data.user_pic);
+                console.log('1')
+            } else {
+                $('.layui-nav-img').hide();
+                $('.touxiang').css('display', 'inline-block').text(username.substring(0, 1).toUpperCase());
+                console.log('2')
+            }
+
         }
     });
 
