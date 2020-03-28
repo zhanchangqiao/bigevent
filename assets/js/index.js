@@ -27,8 +27,8 @@ function getUserInfo() {
             // 2. 渲染页面
             //成功
             var data = res.data;
-            var username = data.nickname || data.username;;
-            // console.log(res.data.user_pic);
+            var username = data.nickname || data.username;
+            $('.person').text(username);
             if (res.data.user_pic) {
                 $('.touxiang').show();
                 $('.layui-nav-img').show().attr('src', res.data.user_pic);

@@ -1,0 +1,12 @@
+.edit,.del{
+    height: 20px;
+    font-size: 10px;
+    padding: 0px 5px;
+    line-height: 20px;
+}
+.edit{
+    background-color: red;
+}
+.del{
+    background-color: green;
+}
