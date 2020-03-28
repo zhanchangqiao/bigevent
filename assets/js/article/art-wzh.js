@@ -35,7 +35,7 @@ $(function () {
             url: '/my/article/list',
             data: d,
             success: function (res) {
-                console.log(res);
+                // console.log(res);
                 // 通过模板引擎渲染结果到页面
                 var strHtml = template('tb', res);
                 // console.log(strHtml);
@@ -110,4 +110,10 @@ $(function () {
         location.href = '/article/art-edit.html?id=' + id;
     });
 
+    //编辑事件
+    $('body').on('click', '.edit', function () {
+        // 获取事件源上的data-id属性
+        var id = $(this).attr('data-id');
+        location.href = '/article/art-edit.html?id=' + id;
+    });
 });
